@@ -27,6 +27,10 @@ def create_app(test_config=None):
     # a simple page that says hello
     @app.route('/')
     def index():
-        return 'Hello, World!'
+        return 'well shit'
+
+    @app.route('/<name>')
+    def request_name(name):
+        return "who the hell are you {}?".format(name)
 
     return app
