@@ -25,11 +25,11 @@ def create_app(test_config=None):
         pass
 
     # a simple page that says hello
-    @app.route('/')
-    def index():
+    @app.route('/hello')
+    def hello():
         return 'well shit'
 
-    @app.route('/<name>')
+    @app.route('/hello/<name>')
     def request_name(name):
         return "who the hell are you {}?".format(name)
 
