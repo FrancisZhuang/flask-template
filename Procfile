@@ -1,1 +1,1 @@
-web: gunicorn -w 4 "flaskr:create_app()"
+web: gunicorn "flask-template::create_app('production')"
