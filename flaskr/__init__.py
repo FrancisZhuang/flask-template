@@ -2,8 +2,6 @@ import os
 
 from flask import Flask
 
-app = Flask(__name__)
-
 
 def create_app(test_config=None):
     # create and configure the app
@@ -36,7 +34,3 @@ def create_app(test_config=None):
         return "who the hell are you {}?".format(name)
 
     return app
-
-
-if __name__ == '__main__':
-    app.run()
